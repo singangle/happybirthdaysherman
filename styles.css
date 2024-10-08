@@ -14,21 +14,20 @@
   }
 }
 
-.marquee{
-    white-space: nowrap;
-    animation: marquee 3.5s infinite linear;
-}
-
-.marquee:after{
-    content: "Sherman ";
-}
-
-@keyframes marquee{
-    0% {
-        transform: translateX(0)
+.marquee {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        box-sizing: border-box;
+        animation: marquee 10s linear infinite;
     }
-    100% {
-        transform: translateX(-50%)
+
+    @keyframes marquee {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(-100%);
     }
 }
 
